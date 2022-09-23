@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -7,10 +8,16 @@ module.exports = {
     initialize: './src/initialize.js',
     home: './src/home.js'
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Restaurant Page',
+    }),
+  ],
   devtool: 'inline-source-map',
   output: {
-    filename: 'main.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   module: {
     rules: [

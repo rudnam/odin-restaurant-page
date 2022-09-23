@@ -79,9 +79,11 @@ function createFooter() {
 }
 
 export default function initialize() {
-    const content = document.querySelector('#content');
+    const content = document.createElement('div');
+    content.id = 'content';
 
-    document.body.insertBefore(createHeader(),content);
+    document.body.appendChild(createHeader());
+    document.body.appendChild(content);
     document.body.appendChild(createFooter());
     return;
 }
