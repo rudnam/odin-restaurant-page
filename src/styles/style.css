@@ -264,6 +264,11 @@ footer {
     font-family: sans-serif;
 }
 
+.ftr-buttons {
+    display: flex;
+    gap: 5px;
+}
+
 .ftr-buttons button {
     background-color: #46423b;
     color: #f2f2f2;

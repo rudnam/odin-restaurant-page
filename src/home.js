@@ -1,6 +1,5 @@
 const content = document.body.querySelector('#content');
 
-export default function homePage() {
-        
+export default function loadHome() {
     return;
 }
