@@ -1,7 +1,8 @@
 // initialize.js
-import Logo from './images/logo.png'
-import FB from './images/fb-logo.png'
-import IG from './images/ig-logo.png'
+import Logo from './images/logo.png';
+import FB from './images/fb-logo.png';
+import IG from './images/ig-logo.png';
+import Favicon from './images/favicon.jpg';
 import loadHome from './home';
 import loadStores from './stores';
 import loadMenu from './menu';
@@ -90,10 +91,20 @@ function createFooter() {
     return footer;
 }
 
+function initFavicon() {
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = Favicon;
+    document.head.appendChild(link);
+    return;
+}
+
 export default function initialize() {
     const content = document.createElement('div');
     content.id = 'content';
 
+    initFavicon();
     document.body.appendChild(createHeader());
     document.body.appendChild(content);
     document.body.appendChild(createFooter());
