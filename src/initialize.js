@@ -2,6 +2,7 @@
 import Logo from './images/logo.png'
 import FB from './images/fb-logo.png'
 import IG from './images/ig-logo.png'
+import loadHome from './home';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -18,6 +19,9 @@ function createHeader() {
     const li2 = document.createElement('li');
     const li3 = document.createElement('li');
     li1.innerText = 'HOME';
+    li1.addEventListener('click', function() {
+        loadHome();
+    });
     li2.innerText = 'OUR STORES';
     li3.innerText = 'MENU';
     ul.appendChild(li1);
