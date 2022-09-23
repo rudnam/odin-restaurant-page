@@ -9,25 +9,29 @@
   </head>
   <body>
     <header>
-      <img src="/src/logo.png" alt="logo">
-      <ul>
-        <li>HOME</li>
-        <li>OUR STORES</li>
-        <li>MENU</li>
-      </ul>
-      <button>ORDER NOW</button>
-      <button>DIRECT ONLINE PAYMENT</button>
+      <div class="header">
+        <a href="/dist/index.html">
+          <img src="/src/logo.png" alt="logo" hr>
+        </a>
+        <ul>
+          <li>HOME</li>
+          <li>OUR STORES</li>
+          <li>MENU</li>
+        </ul>
+        <button id="order">ORDER NOW</button>
+        <button id="payment">DIRECT ONLINE PAYMENT</button>
+      </div>
     </header>
     <div id="content">
-      <div class="searchbar">
-        <input type="search" name="search" id="search">
-        <button>Search</button>
+      <section id="searchbar">
+        <input type="search" name="search" id="search" placeholder="Search for your CONTI's favorites...">
+        <button><img src="/src/search.png" alt="search"></button>
       </div>
-      <div id="pictures">
+      <section id="pictures">
         <img src="/src/MangoBravo.jpg" alt="cake">
-      </div>
-      <div id="products">
-        <p class="products-title">Our <span class="green">Products</span></p>
+      </section>
+      <section id="products">
+        <p class="products-title"><span>Our <span class="green">Products</span></span></p>
         <div class="product-items">
           <div class="product-item">
             <div class="product-title">WHAT'S NEW?</div>
@@ -54,11 +58,11 @@
             <div class="product-img"><img src="/src/cake.jpg" alt="cake"></div>
           </div>
         </div>
-      </div>
-      <div id="video">
+      </section>
+      <section id="video">
         <img src="/src/ytimg.jpg" alt="thumbnail">
-      </div>
-      <div id="story">
+      </section>
+      <section id="story">
         <div class="story-photo">
           <img src="/src/contis.jpg" alt="restaurant">
         </div>
@@ -97,11 +101,11 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
     <footer>
       <div class="ftr-title">
-        Conti's Bakeshop and Restaurant
+        Conti<span>'</span>s Bakeshop and Restaurant
       </div>
       <div class="ftr-buttons">
         <button>Our Services</button>
@@ -117,7 +121,7 @@
         </div>
       </div>
       <div class="ftr-copyright">
-        © Copyright Conti's Bakeshop and Restaurant. All Rights Reserved
+        © Copyright <span>Conti's Bakeshop and Restaurant.</span> All Rights Reserved
       </div>
     </footer>
   </body>
