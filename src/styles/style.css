@@ -13,6 +13,7 @@
 
 :root {
     background-color: #ffffff;
+    min-width: 100vw;
     color: #ffffff;
     font-size: 16px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,6 +40,7 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
+    overflow: hidden;
 }
 
 header img, header a {
@@ -188,24 +190,32 @@ header button {
 }
 
 #video {
+    margin: 5px;
     cursor: pointer;
     margin: 30px auto;
     height: 400px;
-    width: 800px;
-    overflow: hidden;
+    width: min(800px,80%);
 }
 
 #video img {
     max-height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
 #story {
     padding: 0 10vw 50px;
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     justify-content: space-between;
+    justify-items: center;
+    gap: 50px;
+    /*
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; */
     margin: 50px 0;
 }
 
@@ -224,7 +234,7 @@ header button {
     display: flex;
     font-size: 0.8rem;
     flex-direction: column;
-    width: 30vw;
+    width: min(80%,380px);
     text-align: center;
     color: #444444;
 }
@@ -238,7 +248,7 @@ header button {
 }
 
 .story-photo {
-    width: 30vw;
+    width: min(80%,380px);
 }
 
 .story-photo img {
