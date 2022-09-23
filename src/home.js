@@ -1,6 +1,6 @@
 const content = document.body.querySelector('#content');
 
-export default function pageLoad() {
-
+export default function homePage() {
+        
     return;
 }

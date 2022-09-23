@@ -1,7 +1,7 @@
 /* style.css */
 @font-face {
     font-family: 'SunValley';
-    src: url('./SunValley.ttf');
+    src: url('../fonts/SunValley.ttf');
     font-weight: 600;
     font-style: normal;
 }
