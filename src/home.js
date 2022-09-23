@@ -135,7 +135,7 @@ export default function loadHome() {
     const content = document.querySelector('#content');
     content.innerHTML = '';
 
-    console.log('a');
+    console.log('home');
     content.appendChild(createSearchbar());
     content.appendChild(createPictures());
     content.appendChild(createProducts());

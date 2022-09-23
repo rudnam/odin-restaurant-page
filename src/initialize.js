@@ -3,6 +3,8 @@ import Logo from './images/logo.png'
 import FB from './images/fb-logo.png'
 import IG from './images/ig-logo.png'
 import loadHome from './home';
+import loadStores from './stores';
+import loadMenu from './menu';
 
 function createHeader() {
     const header = document.createElement('header');
@@ -23,7 +25,13 @@ function createHeader() {
         loadHome();
     });
     li2.innerText = 'OUR STORES';
+    li2.addEventListener('click', function() {
+        loadStores();
+    });
     li3.innerText = 'MENU';
+    li3.addEventListener('click', function() {
+        loadMenu();
+    });
     ul.appendChild(li1);
     ul.appendChild(li2);
     ul.appendChild(li3);
