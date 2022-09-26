@@ -8,60 +8,69 @@ import contisJpg from './images/contis.jpg';
 export function createSearchbar() {
     const searchbar = document.createElement('section');
 
-    searchbar.id = 'searchbar';
     const search = document.createElement('input');
-    search.type = 'search';
-    search.name = 'search';
-    search.id = 'search';
-    search.placeholder = "Search for your CONTI's favorites...";
     const btn = document.createElement('button');
     const searchIcon = new Image();
-    searchIcon.src = searchPng;
+
     btn.appendChild(searchIcon);
     searchbar.appendChild(search);
     searchbar.appendChild(btn);
 
+    searchbar.id = 'searchbar';
+    search.id = 'search';
+    search.type = 'search';
+    search.name = 'search';
+    search.placeholder = "Search for your CONTI's favorites...";
+    searchIcon.src = searchPng;
+    
     return searchbar;
 }
 
 function createPictures() {
     const pictures = document.createElement('section');
     
-    pictures.id = 'pictures';
     const mangoPhoto = new Image();
-    mangoPhoto.src = mangoJpg;
+
     pictures.appendChild(mangoPhoto);
 
+    pictures.id = 'pictures';
+    mangoPhoto.src = mangoJpg;
+    
     return pictures;
 }
 
 function createProducts() {
     const products = document.createElement('section');
 
-    products.id = 'products';
     const p = document.createElement('p');
-    p.classList.add('products-title');
-    p.innerHTML = '<span>Our <span class="green">Products</span></span>';
-    products.append(p);
     const divItems = document.createElement('div');
+    
+    products.append(p);
+    products.append(divItems);
+    
+    products.id = 'products';
+    p.classList.add('products-title');
     divItems.classList.add('product-items');
+    p.innerHTML = '<span>Our <span class="green">Products</span></span>';
+    
     const numOfProducts = 6;
     for (let i=0; i<numOfProducts; i++) {
         const divItem = document.createElement('div');
-        divItem.classList.add('product-item');
         const divTitle = document.createElement('div');
-        divTitle.classList.add('product-title');
-        divTitle.innerText = "FABULOUS CAKES";
-        divItem.appendChild(divTitle);
         const divImg = document.createElement('div');
-        divImg.classList.add('product-img');
         const cake = new Image();
-        cake.src = cakeJpg;
+
+        divItem.appendChild(divTitle);
         divImg.appendChild(cake);
         divItem.appendChild(divImg);
         divItems.appendChild(divItem);
+
+        divItem.classList.add('product-item');
+        divTitle.classList.add('product-title');
+        divImg.classList.add('product-img');
+        divTitle.innerText = "FABULOUS CAKES";
+        cake.src = cakeJpg;
     }
-    products.append(divItems);
 
     return products;
 }
@@ -69,10 +78,12 @@ function createProducts() {
 function createVideo() {
     const video = document.createElement('section');
 
-    video.id = 'video';
     const thumbnail = new Image();
-    thumbnail.src = ytJpg;
+
     video.appendChild(thumbnail);
+
+    video.id = 'video';
+    thumbnail.src = ytJpg;
 
     return video;
 }
@@ -80,26 +91,30 @@ function createVideo() {
 function createStory() {
     const story = document.createElement('section');
 
-    story.id = 'story';
     const divPhoto = document.createElement('div');
-    divPhoto.classList.add('story-photo');
     const contis = new Image();
-    contis.src = contisJpg;
+    const divText = document.createElement('div');
+    const divTitle = document.createElement('div');
+    const divSubtitle = document.createElement('div');
+    const divContent = document.createElement('div');
+
     divPhoto.appendChild(contis);
     story.appendChild(divPhoto);
-    const divText = document.createElement('div');
-    divText.classList.add('story-text');
-    const divTitle = document.createElement('div');
-    divTitle.classList.add('story-title');
-    divTitle.innerText = 'Our Story';
     divText.appendChild(divTitle);
-    const divSubtitle = document.createElement('div');
-    divSubtitle.classList.add('story-subtitle');
-    divSubtitle.innerText = 'FOREVER SHARING JOY FROM OUR HOME TO YOURS';
     divText.appendChild(divSubtitle);
     divText.appendChild(document.createElement('br'));
-    const divContent = document.createElement('div');
+    divText.appendChild(divContent);
+    story.appendChild(divText);
+
+    story.id = 'story';
+    divPhoto.classList.add('story-photo');
+    divText.classList.add('story-text');
+    divTitle.classList.add('story-title');
+    divSubtitle.classList.add('story-subtitle');
     divContent.classList.add('story-content');
+    contis.src = contisJpg;
+    divTitle.innerText = 'Our Story';
+    divSubtitle.innerText = 'FOREVER SHARING JOY FROM OUR HOME TO YOURS';
     divContent.innerHTML = `<p>
                             A passion to create and serve delectable food reminiscent of the convenience 
                             and comforting warmth of one's own home, this is what we at Conti's are all 
@@ -125,8 +140,6 @@ function createStory() {
                             <p>
                             We are committed to make every guest experience memorable and to continue sharing our story in every product we create and serve.
                             </p>`;
-    divText.appendChild(divContent);
-    story.appendChild(divText);
 
     return story;
 }
@@ -135,7 +148,6 @@ export default function loadHome() {
     const content = document.querySelector('#content');
     content.innerHTML = '';
 
-    console.log('home');
     content.appendChild(createSearchbar());
     content.appendChild(createPictures());
     content.appendChild(createProducts());
