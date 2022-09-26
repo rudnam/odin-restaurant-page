@@ -207,7 +207,7 @@ header button {
     padding: 0 10vw 50px;
     display: grid;
     grid-template-rows: min-content;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     align-items: center;
     justify-content: space-between;
     justify-items: center;
@@ -234,7 +234,7 @@ header button {
     display: flex;
     font-size: 0.8rem;
     flex-direction: column;
-    width: min(80%,380px);
+    width: min(80%,480px);
     text-align: center;
     color: #444444;
 }
@@ -313,4 +313,113 @@ footer {
 
 li {
     text-decoration: none;
+}
+
+#topbar {
+    padding: 30px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar-title {
+    margin-left: 5vw;
+    font-family: 'SunValley';
+    font-size: 2rem;
+    color: #444444;
+}
+
+#topbar #searchbar {
+    height: 3rem;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#topbar #searchbar input[type=search] {
+    border: 1px solid #ced4da;
+    padding-left: 10px;
+    height: 1.75rem;
+    width: 400px;
+    border-radius: 3px;
+}
+
+#topbar #selectbar {
+    height: 3rem;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#topbar #selectbar select {
+    padding-left: 5px;
+    width: 425px;
+    border: 1px solid #ced4da;
+    height: 1.75rem;
+    border-radius: 3px;
+}
+
+.store-cards {
+    margin: auto;
+    padding: 15px;
+    min-height: min-content;
+    width: 95%;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    overflow: hidden;
+}
+
+.store-card {
+    background-color: #fff;
+    color: #444444;
+    border: 1px solid #28a745;
+    border-radius: 3px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-title {
+    color: #2c8845;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card-address {
+    text-align: center;
+    line-height: 2;
+}
+
+.card-schedule {
+    margin-right: auto;
+}
+
+.card-contacts {
+    margin-right: auto;
+}
+
+.store-card hr {
+    min-width: 100%;
+}
+
+.card-details {
+    width: 90%;
+    background-color: inherit;
+    cursor: pointer;
+    border: 1px solid #28a745;
+    color: #28a745;
+    padding: 8px 0;
+    border-radius: 3px;
+}
+
+.card-details:hover {
+    background-color: #28a745;
+    color: #fff;
 }

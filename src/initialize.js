@@ -108,5 +108,6 @@ export default function initialize() {
     document.body.appendChild(createHeader());
     document.body.appendChild(content);
     document.body.appendChild(createFooter());
+    loadHome();
     return;
 }
