@@ -5,7 +5,7 @@ import cakeJpg from './images/cake.jpg';
 import ytJpg from './images/ytimg.jpg';
 import contisJpg from './images/contis.jpg';
 
-function createSearchbar() {
+export function createSearchbar() {
     const searchbar = document.createElement('section');
 
     searchbar.id = 'searchbar';

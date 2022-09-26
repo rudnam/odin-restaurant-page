@@ -26,7 +26,7 @@
 header {
     position: sticky;
     top: 0;
-    padding: 5px 50px;
+    padding: 5px 5vw;
     height: 80px;
     background-color: rgba(255, 255, 255, 0.8);
     color: #2c8845;
@@ -36,11 +36,12 @@ header {
 .header {
     margin: 0 auto;
     width: min(1100px,90vw);
+    max-width: 90vw;
     height: inherit;
     display: flex;
     align-items: center;
     gap: 20px;
-    overflow: hidden;
+    overflow-x: clip;
 }
 
 header img, header a {
@@ -204,19 +205,15 @@ header button {
 }
 
 #story {
-    padding: 0 10vw 50px;
+    padding: 0 0 50px;
     display: grid;
     grid-template-rows: min-content;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: stretch;
     justify-content: space-between;
     justify-items: center;
     gap: 50px;
-    /*
-    display: flex;
-    align-items: center; 
-    justify-content: space-between; */
-    margin: 50px 0;
+    overflow-x: hidden;
 }
 
 .story-title {
@@ -234,7 +231,7 @@ header button {
     display: flex;
     font-size: 0.8rem;
     flex-direction: column;
-    width: min(80%,480px);
+    width: min(80vw,480px);
     text-align: center;
     color: #444444;
 }
@@ -248,7 +245,7 @@ header button {
 }
 
 .story-photo {
-    width: min(80%,380px);
+    width: min(80vw,480px);
 }
 
 .story-photo img {
@@ -362,7 +359,7 @@ li {
 
 .store-cards {
     margin: auto;
-    padding: 15px;
+    padding: 15px 0 30px;
     min-height: min-content;
     width: 95%;
     display: grid;
@@ -422,4 +419,62 @@ li {
 .card-details:hover {
     background-color: #28a745;
     color: #fff;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 10vw;
+    color: #444444;
+    font-size: 0.8rem;
+    gap: 10px;
+}
+
+.menu-items {
+    min-height: min-content;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    color: #2c8845;
+}
+
+.menu-item {
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item-title {
+    font-weight: bolder;
+}
+
+.item-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-title {
+    font-family: 'SunValley';
+    font-size: 1.5rem;
+}
+
+.menu-title span {
+    font-family: sans-serif;
+}
+
+.item-img img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
 }
